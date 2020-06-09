@@ -1,0 +1,44 @@
+.red {
+  background-color: red;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.transition {
+  position: absolute;
+  left: 0;
+  right: 0;
+  transition: transform cubic-bezier(0.6, 0.2, 0.1, 1) .5s;
+}
+
+.forward {
+  .slide-enter {
+    transform: translateX(100%);
+  }
+  .slide-enter-active {
+    transform: translateX(0%);
+  }
+  .slide-leave {
+    transform: translateX(0%);
+  }
+  .slide-leave-active {
+    transform: translateX(-100%);
+  }
+}
+
+.back {
+  .slide-enter {
+    transform: translateX(-100%);
+  }
+  .slide-enter-active {
+    transform: translateX(0%);
+  }
+  .slide-leave {
+    transform: translateX(0%);
+  }
+  .slide-leave-active {
+    transform: translateX(100%);
+  }
+}
